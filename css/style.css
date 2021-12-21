@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 /* Intestazione */
 header {
     width: 100%;
@@ -39,7 +43,7 @@ header {
 
 .container-nav ul li a {
     color: #5f6368;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .container-nav ul li:last-child a {
