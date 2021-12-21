@@ -76,6 +76,37 @@
                 'answer' => "<p>In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <span><a href>URL referrer</a></span>. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili <span><a href>qui</a></span>. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.</p>"
             ]
         ],
+    ];
+    $detailsNavbarHeader = [
+        [
+            'text' => 'Introduzione'
+        ],
+        [
+            'text' => 'Norme sulla privacy'
+        ],
+        [
+            'text' => 'Termini di servizio'
+        ],
+        [
+            'text' => 'Tecnologie'    
+        ],
+        [
+            'text' => 'Domande frequenti'
+        ]
+        ];
+    $detailsNavbarFooter = [
+        [
+            'text' => 'Google'
+        ],
+        [
+            'text' => 'Tutto su Google'
+        ],
+        [
+            'text' => 'Privacy'
+        ],
+        [
+            'text' => 'Termini'
+        ]
     ]
 
     ?>
@@ -83,7 +114,19 @@
 <body>
     <!-- Intestazione -->
     <header>
-
+        <div class="container-logo">
+            <img src="img/logo.svg" alt="logo google">
+            <span>Privacy e termini</span>
+        </div>
+        <div class="container-nav">
+            <ul>
+                <?php
+                    foreach ($detailsNavbarHeader as $value) {
+                        echo '<li><a href>' . $value['text'] . '</a></li>';
+                    }
+                ?>
+            </ul>
+        </div>
     </header>
     <!-- Parte principale -->
     <main>
@@ -103,7 +146,15 @@
     </main>
     <!-- Footer -->
     <footer>
-
+        <div class="ms-container">
+            <ul>
+                <?php
+                    foreach ($detailsNavbarFooter as $value) {
+                        echo '<li><a href>' . $value['text'] . '</a></li>';
+                    }
+                ?>
+            </ul>
+        </div>
     </footer>
 
 </body>
